@@ -28,15 +28,6 @@ const elem = document.createElement('div');
 elem.classList.add('event')
 elem.setAttribute('data-id', r.id);
 
-
-const idElem = document.createElement('div');
-idElem.classList.add('id');
-idElem.append(r.id);
-
-const nameElem = document.createElement('div');
-nameElem.classList.add('name');
-nameElem.append(r.id);
-
 const dateElem = document.createElement('div');
 dateElem.classList.add('date');
 dateElem.append(r.date);
@@ -49,10 +40,6 @@ const descriptionElem = document.createElement('div');
 descriptionElem.classList.add('description');
 descriptionElem.append(r.description)
 
-const cohortIdElem =document.createElement('div');
-cohortIdElem.classList.add('cohortId');
-cohortIdElem.append(r.cohortId);
-
 const delButtonElm = document.createElement('button') 
 const buttonText =document.createElement('Delete'); 
 delButtonElm.appendChild(buttonText);
@@ -63,11 +50,9 @@ delButtonElem.addEventListener('click', async (done) => {
     const result = await deleteEvent(id)
 })
 
-elem.append(idElem);
 elem.append(nameElem);
 elem.append(dateElem);
 elem.append(locationElem);
-elem.append(cohortIdElem);
 elem.append(descriptionElem);
 elem.append(delButtonElem);
 
